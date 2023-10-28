@@ -5,6 +5,8 @@ const hbs=require('hbs')
 const geocode = require("./utils/geocode")
 const forecast = require("./utils/prediksiCuaca")
 
+const port = process.env.PORT || 1200
+
 //mendefisinikan jalur/path untuk konfigurasi express
 const direktoriPublic = path.join(__dirname, '../public')
 const diretoriViews= path.join(__dirname, '../templates/views')
@@ -85,8 +87,8 @@ app.get('*', (req, res) =>{
     })
 })
 
-app.listen(1200, () =>{
-    console.log('Server berjalan pada port 1200')
+app.listen(port, () =>{
+    console.log('Server berjalan pada port ' + port)
 })
 
 
