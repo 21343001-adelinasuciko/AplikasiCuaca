@@ -9,7 +9,70 @@
     <body>
         <div class="main-content">
             {{>header}}
-            <p>{{teksBantuan}}</p>
+            <h2>Frequently Asked Questions: </h2>
+            
+            <ul class="accordion">
+                <li>
+                    <input type="radio" name="accordion" id="first" checked>
+                    <label for="first">Halaman ini digunakan untuk apa?</label>
+                    <div class="content">
+                        <p>Halaman yang dirancang untuk menjawab pertanyaan-pertanyaan yang sering diajukan.
+                            tujuannya adalah memberikan informasi yang berguna dan mudah diakses kepada pengguna,
+                            dan untuk mengedukasi pengguna tentang produk atau layanan, memberikan panduan penggunaan, 
+                            dan menjelaskan konsep yang mungkin membingungkan. </p>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="accordion" id="second">
+                    <label for="second">Apa itu API?</label>
+                    <div class="content">
+                        <p>API, singkatan dari "Application Programming Interface," adalah sekumpulan aturan dan protokol 
+                         yang memungkinkan berbagai perangkat lunak atau aplikasi komputer untuk berinteraksi satu sama lain. 
+                         API adalah cara bagi berbagai komponen perangkat lunak untuk berkomunikasi, berbagi data, dan memungkinkan 
+                         fungsionalitas yang berbeda untuk bekerja bersama.</p>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="accordion" id="third">
+                    <label for="third">API apa yang digunakan dalam aplikasi ini?</label>
+                    <div class="content">
+                        <p>API yang digunakan dalam aplikasi ini yaitu:</p>
+                        <ul>
+                            <li>Mapbox</li>
+                            <li>Weather</li>
+                            <li>mediastack</li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="accordion" id="fourth">
+                    <label for="fourth">Salah satu pola arsitektur API adalah RESTful</label>
+                    <div class="content">
+                        <p>REST adalah singkatan dari Representational State Transfer dan merupakan salah satu tipe arsitektur software. 
+                        REST mewakili serangkaian batasan yang harus diikuti saat anda mengembangkan di internet. Suatu API akan disebut sebagai 
+                        RESTful API apabila mampu memenuhi ketentuan dan batasan yang ditetapkan oleg gaya arsitektur REST ini. kriteria tersebut 
+                        ditujukan untuk menstandarkan proses komunikasi antar berbagai platform dan menjadikannya lebih fleksibel. Dengan aturan ini, 
+                        aplikai yang dikembangkan bisa memiliki antarmuka yang tersusun rapi serta prosedur yang terstandarisasi dan mudah direpresentasikan. 
+                        Hal ini pun mempermudah komunikasi antara perangkat dan pengguna.</p>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="radio" name="accordion" id="five">
+                    <label for="five">Gambar diagram arsitektur API RESTful</label>
+                    <div class="content">
+                        <p><img src="/img/API RESTful.png"></p>
+                    <p><h3>Cara Kerja RESTful API</h3></p>
+                    <p>RESTful API bekerja dengan cara memanipulasi resource dan representasi. Representasi ini saling dipertukarkan diantara pengguna dan server melalui 
+                    antarmuka terstandar dan protokol komunikasi tertentu, biasanya HTTPJadi saat pengguna ingin menggunakan fungsi suatu aplikasi, perangkatnya akan mengirimkan permintaan melalui HTTP ke server. Server ini mencari resource 
+                    dan mengkomunikasikan representasi state sebagai respons kepada pengguna melalui protokol yang sama. Representasi ini bisa disebut dalam berbagai format, 
+                    seperti JSON atau XML.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
         {{>footer}}
     </body>

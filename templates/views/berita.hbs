@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Berita Terbaru</title>
+  <link rel="icon" href="/img/cuaca.png" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <div class="main-content">
+    {{>header}}
+    <div class="berita-container">
+      <p>Halaman ini berisi berita</p>
+      {{#each berita}}
+        <div class="berita-item">
+          <h2>{{this.title}}</h2>
+          <p>{{this.description}}</p>
+          <p>Sumber: {{this.source}}</p>
+          <p>Tanggal: {{this.published_at}}</p>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+  {{>footer}}
+  <script src="/js/app.js"></script>
+</body>
+</html>

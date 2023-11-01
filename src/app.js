@@ -5,7 +5,7 @@ const hbs=require('hbs')
 const geocode = require("./utils/geocode")
 const forecast = require("./utils/prediksiCuaca")
 
-const port = process.env.PORT || 1200
+const port = process.env.PORT || 1600
 
 //mendefisinikan jalur/path untuk konfigurasi express
 const direktoriPublic = path.join(__dirname, '../public')
@@ -33,7 +33,6 @@ app.get('', (req, res) => {
 app.get('/bantuan', (req, res) =>{
     res.render('bantuan', {
         judul: 'Bantuan',
-        teksBantuan: 'Ini adalah teks bantuan',
         nama: 'Adelina Suciko'
     })
 })
@@ -69,6 +68,16 @@ app.get('/infocuaca', (req, res) => {
       });
     });
   });
+
+  // Ini halaman berita
+app.get('/berita', (req, res) => {
+  res.render('berita', {
+      judul: 'Berita Terbaru',
+      nama: 'Adelina Suciko',
+      isiBerita: 'Ini adalah isi berita terbaru.'
+  });
+});
+
 
 //ini halaman bantuan/FAQ
 app.get('/bantuan/*', (req, res) =>{
