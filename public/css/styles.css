@@ -61,6 +61,42 @@ button{
     padding: 9px;
 }
 
+.berita-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.berita-item{
+    padding: 20px;
+    background-color: #fa74c6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.berita-item h3{
+    color: #fcfcfc;
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.berita-item p{
+    color: #fafafc;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.berita-item a{
+    color: #275c59;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.berita-item a:hover{
+    color: #1bfff4;
+}
+
 .container{
     margin: auto;
     display: grid;
@@ -229,3 +265,4 @@ input[type="radio"]{
 .accordion input[type="radio"]:checked + label::before{
     content: '-';
 }
+

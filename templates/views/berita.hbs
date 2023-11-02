@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Berita Terbaru</title>
-  <link rel="icon" href="/img/cuaca.png" />
-  <link rel="stylesheet" href="/css/styles.css" />
+    <title>Halaman Berita</title>
+    <link rel="icon" href="/img/berita.jpg">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-  <div class="main-content">
-    {{>header}}
-    <div class="berita-container">
-      <p>Halaman ini berisi berita</p>
-      {{#each berita}}
-        <div class="berita-item">
-          <h2>{{this.title}}</h2>
-          <p>{{this.description}}</p>
-          <p>Sumber: {{this.source}}</p>
-          <p>Tanggal: {{this.published_at}}</p>
+    <div class="main-content">
+        {{>header}}
+        <h2>{{judul}}</h2> 
+             <div class="berita-list">
+            {{#each berita}}
+            <div class="berita-item">
+                <h3>{{title}}</h3>
+                <p>{{description}}</p>
+                <a href="{{url}}" target="_blank">Baca selengkapnya</a>
+            </div>
+            {{/each}}
         </div>
-      {{/each}}
+        </div>
+       
     </div>
-  </div>
-  {{>footer}}
-  <script src="/js/app.js"></script>
+    {{>footer}}
 </body>
+
 </html>

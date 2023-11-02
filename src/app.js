@@ -85,7 +85,7 @@ app.get('/berita', async (req, res) => {
       const dataBerita = response.data;
 
       res.render('berita', {
-          nama: 'Siptya Savira Rahmi',
+          nama: 'Adelina Suciko',
           judul: 'Laman Berita',
           berita: dataBerita.data,
       });
